@@ -1,0 +1,54 @@
+*, ::after, ::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: "Liter", serif;
+}
+body{
+    background-color: black;
+    letter-spacing: 1.5px;
+    scroll-behavior: smooth;
+}
+nav{
+    width: fit-content;
+    height: 5vh;
+    padding: 50px;
+    position: fixed;
+    top: 0;
+    right: 10%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+a{
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 20px;
+    text-decoration: none;
+    position: relative;
+}
+a::after {
+    content: "";
+    width: 100%;
+    border-bottom: 2px solid #9e37ff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+a:hover::after {
+    opacity: 1;
+}  
+#aboutCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#aboutp{
+    color: white;
+    font-size: 30px;
+}
