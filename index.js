@@ -95,14 +95,14 @@ function loop(timeNow){
 window.addEventListener("scroll", changeOpacity);
 
 function changeOpacity() {
-    const element = document.querySelector(".background"); // Change selector if needed
+    const element = document.getElementById(".background"); 
     const scrollTop = window.scrollY; // Get vertical scroll position
-    const maxScroll = document.body.scrollHeight - window.innerHeight; // Max scrollable height
+    const maxScroll = document.body.scrollHeight - window.innerHeight; 
 
-    let opacity = 1 - scrollTop / maxScroll; // Calculate opacity (1 at top, 0 at bottom)
-    opacity = Math.max(0.2, opacity); // Ensures opacity doesn't go below 0.2
+    let opacity = 1 - scrollTop / maxScroll; 
+    opacity = Math.max(0.5, opacity); 
 
-    element.style.opacity = opacity.toFixed(2); // Apply opacity with 2 decimal precision
+    element.style.opacity = opacity.toFixed(2); 
 }
 
 document.getElementById("downArrow").addEventListener("click", () => {

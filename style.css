@@ -122,4 +122,11 @@ a:hover::after {
 }
 .gallery img{
     width: 100%;
+    opacity: 0.5;
+    transition: opacity 300ms ease;
+}
+.gallery img:hover{
+    opacity: 1;
+    cursor: pointer;
+    z-index: 5;
 }
